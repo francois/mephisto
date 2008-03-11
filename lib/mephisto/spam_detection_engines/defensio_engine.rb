@@ -99,8 +99,8 @@ module Mephisto
           :trusted_user => options[:authenticated]
         )
 
-        comment.update_attribute(:spam_engine_data, {:signature => response["signature"], :spaminess => response["spaminess"].to_f})
-        !response["spam"]
+        comment.update_attribute(:spam_engine_data, {:signature => response[:signature], :spaminess => response[:spaminess].to_f})
+        !response[:spam]
       end
 
       def mark_as_ham(permalink_url, comment)
