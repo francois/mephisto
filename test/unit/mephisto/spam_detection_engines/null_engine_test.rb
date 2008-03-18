@@ -19,10 +19,10 @@ context "Mephisto::SpamDetectionEngines::NullEngine" do
   end
 
   specify "should be a noop to mark as spam" do
-    assert_nil @engine.mark_as_spam(nil)
+    assert_nil @engine.mark_as_spam(nil, nil)
   end
 
   specify "should be a noop to mark as ham" do
-    assert_nil @engine.mark_as_ham(nil)
+    assert_nil @engine.mark_as_ham(nil, nil)
   end
 end
